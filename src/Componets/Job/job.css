@@ -16,7 +16,7 @@
     position: sticky;
 }
 .internship-filter{
-    background: #f8f8f8;
+    background: #eda1a1;
 }
 .search-2{
     border-radius: 6px;
@@ -153,5 +153,23 @@
     .all-ele{
 margin-top: -45px;
     }
- 
+    .en{
+      background-color: rgb(241, 248, 246);
+    }
+    .fr{
+      background-color:rgb(247, 239, 77);
+      
+    }
+    .sp{
+      background-color:rgb(245, 246, 240);
+    }
+    .po{
+      background-color:rgb(246, 237, 244);
+    }
+    .hi{
+      background-color: rgb(131, 249, 253);
+    }
+    .ch{
+    background-color: rgb(196, 243, 28);
+    }
   

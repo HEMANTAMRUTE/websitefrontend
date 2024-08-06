@@ -2,16 +2,19 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import "./admin.css";
 import { Link } from 'react-router-dom'
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 
 
 function ViewAllApplication() {
+  const {t}=useTranslation();
 
     const [application,setApplication]=useState([])
     useEffect(()=>{
         const fetchApplication= async()=>{
         try {
-            const response=await axios.get("https://internarea-ztdw.onrender.com/api/application")
+            const response=await axios.get("http://localhost:5000/api/application")
 setApplication(response.data)
 
         } catch (error) {

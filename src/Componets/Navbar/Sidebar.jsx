@@ -7,7 +7,12 @@ import { selectUser } from '../../Feature/Userslice';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase/firebase';
 
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
 function Sidebar() {
+
+  
     const [sidebarOpen, setSidebarOpen] = useState(false);
 const navigate=useNavigate()
   const openSidebar = () => {
@@ -26,8 +31,9 @@ const navigate=useNavigate()
     };
 
     document.addEventListener('click', handleOutsideClick);
-
+    
     return () => {
+      
       document.removeEventListener('click', handleOutsideClick);
     };
   }, [sidebarOpen]);
@@ -37,9 +43,11 @@ const navigate=useNavigate()
   
 }
   const user=useSelector(selectUser)
+  const {t}=useTranslation();
   return (
 
     <>
+    
   <div className="App2 -mt-2 overflow-hidden"  >
       <Link to="/">
   <img src={logo} alt=""  id='nav2-img'/>    </Link>  
@@ -53,7 +61,7 @@ const navigate=useNavigate()
    <Link to={"/profile"}>
    <img className='rounded-full justify-center' src={user.photo} alt="" srcset="" />
    </Link> 
-    <p className=' text-center'>Profile name <span className='font-bold text-blue-500'>{user?.name}</span></p>
+    <p className=' text-center'>{t('Profile name')} <span className='font-bold text-blue-500'>{user?.name}</span></p>
   </div>
   </>
 ):
@@ -65,10 +73,10 @@ const navigate=useNavigate()
 </div>
   ) 
 }
-          <Link to="/internship">internships </Link>
-    <Link to="/Jobs">Jobs  </Link>
+          <Link to="/internship">{t('internships')} </Link>
+    <Link to="/Jobs">{t('Jobs')}  </Link>
        
-       <Link to={"/"} className='small'>contact Us</Link> 
+       <Link to={"/"} className='small'>{t('contact Us')}</Link> 
 <hr />
 {user?(
   <>
@@ -76,11 +84,11 @@ const navigate=useNavigate()
     
     {user?(
   <Link to={"/userapplication"}>
-  <p>My Applications</p>
+  <p>{t('My Applications')}</p>
   </Link>
     ):(
       <Link to={"/register"}>
-      <p>My Applications</p>
+      <p>{t('My Applications')} </p>
       </Link>
     )
 
@@ -88,15 +96,15 @@ const navigate=useNavigate()
 
   <Link>
   
-  <p>View Resume</p>
+  <p>{t('View Resume')}</p>
   </Link>
   <Link>
-  <p>More</p>
+  <p>{t('More')}</p>
   </Link>
-  <button className='bt-log' id='bt' onClick={logoutFunction}>Logout <i class="bi bi-box-arrow-right"></i></button>
+  <button className='bt-log' id='bt' onClick={logoutFunction}> {t('Logout ')} <i class="bi bi-box-arrow-right"></i></button>
   <br />
   <br />
-<button onClick={logoutFunction}>Log Out <i class="bi bi-box-arrow-right"></i></button>
+<button onClick={logoutFunction}>{t('Log Out')} <i class="bi bi-box-arrow-right"></i></button>
   
   </div>
   </>
@@ -105,8 +113,8 @@ const navigate=useNavigate()
 
   
   <div className="addmore">
-  <p>Register- As a Student</p>
-  <p>Register- As a Employer</p>
+  <p> {t('Register- As a Student')} </p>
+  <p> {t('Register- As a Employer')} </p>
   <br />
   <br />
 
@@ -140,12 +148,12 @@ const navigate=useNavigate()
   <div className="reg">
     
   <Link to="/register" >   <button  className='btn4'>
-  Register</button></Link>
+   {t('Register')} </button></Link>
   </div>
   <div className="admin">
 
 <Link to={"/adminLog"}>
-<button id='admin'> Admin Login</button>
+<button id='admin'>{t('Admin Login')} </button>
 </Link>
 </div>
   </>
@@ -156,9 +164,10 @@ const navigate=useNavigate()
 }
 
 
-<p className='text-red-300'>Hire Talent</p>
+<p className='text-red-300'>{t('Hire Talent')}</p>
 
       </div>
+    
     </>
     
   )

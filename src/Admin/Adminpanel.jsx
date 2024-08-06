@@ -2,7 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { RiSendPlaneFill } from "react-icons/ri";
 import { BsMailbox2Flag } from "react-icons/bs";
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
 function Adminpanel() {
+  const {t}=useTranslation();
   return (
     <div>
     
@@ -17,8 +20,8 @@ function Adminpanel() {
             </div>
 
             <div>
-              <div class="mb-1 font-semibold">View Applications</div>
-              <p class="text-sm text-gray-500">View All the Applications That you got from applicants</p>
+              <div class="mb-1 font-semibold">{t('View Applications')} </div>
+              <p class="text-sm text-gray-500">{t('View All the Applications That you got from applicants')}</p>
             </div>
           </Link>
 
@@ -28,8 +31,8 @@ function Adminpanel() {
             </div>
 
             <div>
-              <div class="mb-1 font-semibold">Post Job</div>
-              <p class="text-sm text-gray-500">Post Jobs According to Your Requirements</p>
+              <div class="mb-1 font-semibold">{t('Post Job')}</div>
+              <p class="text-sm text-gray-500">{t('Post Jobs According to Your Requirements')}</p>
             </div>
           </Link>
 
@@ -38,8 +41,8 @@ function Adminpanel() {
             <RiSendPlaneFill />
             </div>
             <div>
-              <div class="mb-1 font-semibold">Post InternShips</div>
-              <p class="text-sm text-gray-500">Post InternShip According To Your Requirements </p>
+              <div class="mb-1 font-semibold">{t('Post InternShips')}</div>
+              <p class="text-sm text-gray-500">{t('Post InternShip According To Your Requirements')} </p>
             </div>
           </Link>
 

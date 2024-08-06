@@ -3,6 +3,25 @@
     display: flex;
   
   }
+  .en{
+    background-color: rgb(241, 248, 246);
+  }
+  .fr{
+    background-color:rgb(247, 239, 77);
+  }
+  .sp{
+    background-color:rgb(245, 246, 240);
+  }
+  .po{
+    background-color:rgb(246, 237, 244);
+  }
+.hi{
+    background-color: rgb(131, 249, 253);
+}
+.ch{
+  background-color: rgb(196, 243, 28);
+}
+
   
   
   #imageSlider img {
@@ -214,9 +233,27 @@
     background: #fafafa;
   }
   
-  .infoys {
-    background-color: #fafafa;
+ 
+  .infoysen{
+    background-color: rgb(241, 248, 246);
   }
+  .infoysfr{
+    background-color:rgb(247, 239, 77);
+  }
+  .infoyssp{
+    background-color:rgb(245, 246, 240);
+  }
+  .infoyspo{
+    background-color:rgb(246, 237, 244);
+  }
+.infoyshi{
+    background-color: rgb(131, 249, 253);
+}
+.infoysch{
+  background-color: rgb(196, 243, 28);
+}
+
+  
   
   .internShip-Info {
     width: 116%;

@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 .filter-section{
     width: 37%;
@@ -11,12 +12,15 @@
     top: 1rem;
     box-shadow: 0xp 0px 2px -1px ;
 }
+
+
+
 .first-int{
     width: 49%;
     position: sticky;
 }
 .internship-filter{
-    background: #f8f8f8;
+    background: #f6f3f3;
 }
 .search-2{
     border-radius: 6px;
@@ -107,7 +111,7 @@
         font-size: 25px;
         position: relative;
         left: 43%;   
-           width: 40px;
+         width: 40px;
        }
        .head{
         margin-left: 23rem;
@@ -149,7 +153,7 @@ margin-top: -45px;
       top: 15%;
       left: 23%;
       width: 100%;
-      box-shadow: 0xp 0px 2px 2px ;
+      box-shadow: 0px 0px 2px 2px ;
     }
     #close-btn{
       margin-left:2px;
@@ -158,4 +162,23 @@ margin-top: -45px;
       #filter-ico {
         display: none;
       }
+    }
+    .en{
+      background-color: rgb(241, 248, 246);
+    }
+    .fr{
+      background-color:rgb(247, 239, 77);
+      
+    }
+    .sp{
+      background-color:rgb(245, 246, 240);
+    }
+    .po{
+      background-color:rgb(246, 237, 244);
+    }
+    .hi{
+      background-color: rgb(131, 249, 253);
+    }
+    .ch{
+    background-color: rgb(196, 243, 28);
     }
