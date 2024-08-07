@@ -19,7 +19,7 @@ const OTPForm = () => {
 
   const sendOtp = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/otp/generate-otp', {
+      const response = await fetch('https://websitebackend-v27m.onrender.com/api/otp/generate-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const OTPForm = () => {
 
   const verifyOtp = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/otp/verify-otp', {
+      const response = await fetch('https://websitebackend-v27m.onrender.com/api/otp/verify-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

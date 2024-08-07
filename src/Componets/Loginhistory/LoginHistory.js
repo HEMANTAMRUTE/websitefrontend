@@ -8,7 +8,7 @@ const LoginHistory = () => {
 
   useEffect(() => {
     const fetchLoginHistory = async () => {
-      const response = await axios.get('http://localhost:5000/api/Login/login-history');
+      const response = await axios.get('https://websitebackend-v27m.onrender.com/api/Login/login-history');
       console.log('Login History Data:', response.data);
       setLoginHistory(response.data);
     };

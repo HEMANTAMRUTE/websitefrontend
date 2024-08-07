@@ -28,7 +28,7 @@ const hide=()=>{
 const [data,setData] =useState([])
 useEffect(()=>{
    const fetchData= async()=>{
-  const response=await axios.get(`http://localhost:5000/api/internship/${id}`)
+  const response=await axios.get(`https://websitebackend-v27m.onrender.com/api/internship/${id}`)
   setData(response.data)
 
   const {company,category}=response.data;
@@ -52,7 +52,7 @@ const submitApplication= async()=>{
         Application:id
       }
     
-      await axios.post("http://localhost:5000/api/application",bodyJson).then((res)=>{
+      await axios.post("https://websitebackend-v27m.onrender.com/api/application",bodyJson).then((res)=>{
         console.log("intern send");
   
   

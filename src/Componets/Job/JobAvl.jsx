@@ -19,7 +19,7 @@ function JobAvl() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/job`);
+        const response = await axios.get(`https://websitebackend-v27m.onrender.com/api/job`);
         console.log(response.data); // Log the response data
         setJobData(response.data);
       } catch (error) {

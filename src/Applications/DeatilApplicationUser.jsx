@@ -12,7 +12,7 @@ function DeatilApplication() {
 const id=params.get("a")
 useEffect(()=>{
    const fetchData= async()=>{
-  const response=await axios.get(`http://localhost:5000/api/application/${id}`)
+  const response=await axios.get(`https://websitebackend-v27m.onrender.com/api/application/${id}`)
 
   setData([response.data])
    }

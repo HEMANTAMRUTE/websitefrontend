@@ -25,7 +25,7 @@ const OTPFormmod = ({ onVerify }) => {
 
   const sendOtp = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/otp/generate-otp', {
+      const response = await fetch('https://websitebackend-v27m.onrender.com/api/otp/generate-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const OTPFormmod = ({ onVerify }) => {
 
   const verifyOtp = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/otp/verify-otp', {
+      const response = await fetch('https://websitebackend-v27m.onrender.com/api/otp/verify-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ const OTPFormmod = ({ onVerify }) => {
         i18n.changeLanguage(lng);
         setLang(lng);
         const userInfo = await getUserInfo();
-        await axios.post('http://localhost:5000/api/Login/storeUserInfo', { userInfo });
+        await axios.post('https://websitebackend-v27m.onrender.com/api/Login/storeUserInfo', { userInfo });
 
         handleVerification();
       }

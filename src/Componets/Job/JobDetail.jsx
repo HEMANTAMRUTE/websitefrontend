@@ -22,7 +22,7 @@ const id=params.get("q")
   const [data,setData] =useState([])
 useEffect(()=>{
    const fetchData= async()=>{
-  const response=await axios.get(`http://localhost:5000/api/job/${id}`)
+  const response=await axios.get(`https://websitebackend-v27m.onrender.com/api/job/${id}`)
   
   const {company,category}=response.data;
   setCompany(company)
@@ -52,7 +52,7 @@ const text=document.getElementById("text")
       Application:id
     }
   
-    await axios.post("http://localhost:5000/api/application",bodyJson).then((res)=>{
+    await axios.post("https://websitebackend-v27m.onrender.com/api/application",bodyJson).then((res)=>{
      alert("posted sucess")
     }).catch((err)=>{
       alert("error happend")

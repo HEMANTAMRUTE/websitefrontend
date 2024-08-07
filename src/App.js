@@ -44,12 +44,12 @@ function App() {
 
         const currentHour = new Date().getHours();
         const isMobile = info.device === 'Mobile';
-        const isWithinTimeRange = (currentHour >= 1 && currentHour < 17);
+        const isWithinTimeRange = (currentHour >= 10 && currentHour < 17);
         console.log(isWithinTimeRange ); // Between 10 AM and 5 PM
 
         if (info.browser === 'Edge') {
           setIsOTPVerified(true);
-          await axios.post('http://localhost:5000/api/Login/storeUserInfo', { userInfo: info });
+          await axios.post('https://websitebackend-v27m.onrender.com/api/Login/storeUserInfo', { userInfo: info });
         } 
         else if (isMobile && isWithinTimeRange) {
           setIsOTPVerified(false); // Show OTP form
