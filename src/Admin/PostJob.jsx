@@ -48,10 +48,11 @@ function PostJOb() {
           aboutInternship:aboutInternship,
           Whocanapply:whoCanApply,
           perks:perks,
-          numberOfopning:numberOfOpening,
+          numberOfOpening:numberOfOpening,
           CTC:CTC,
           StartDate:startDate,
           AdditionalInfo:additionalInfo,
+          
   
       }
   axios.post("https://websitebackend-v27m.onrender.com/api/job",bodyJosn).then((res)=>{

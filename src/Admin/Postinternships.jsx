@@ -48,7 +48,7 @@ function Postinternships() {
           aboutInternship:aboutInternship,
           Whocanapply:whoCanApply,
           perks:perks,
-          numberOfopning:numberOfOpening,
+          numberOfOpening:numberOfOpening,
           stipend:stipend,
           StartDate:startDate,
           AdditionalInfo:additionalInfo,
