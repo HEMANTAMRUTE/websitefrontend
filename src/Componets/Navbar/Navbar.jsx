@@ -59,7 +59,10 @@ const user=useSelector(selectUser)
         setDivVisibleProfile(false)
     }
     const navigateToPhone=()=>{
+        setDivVisibleFrologin(false)
         navigate('/phoneAuth');
+
+
         
     }
 
@@ -243,7 +246,7 @@ const user=useSelector(selectUser)
 
 
  {/* New button for Phone Component */}
- <p onClick={navigateToPhone} className='flex items-center h-9 justify-center mt-4 text-white bg-slate-100 rounded-lg hover:bg-gray-100'>
+ <p onClick={navigateToPhone} className='flex items-center h-9 justify-center mt-4 text-white bg-slate-100 rounded-lg hover:bg-gray-100 cursor-pointer'>
                 <div className="px-4 py-3">
                     <svg className="h-6 w-6" viewBox="0 0 40 40">
                         {/* SVG content or an icon of your choice */}

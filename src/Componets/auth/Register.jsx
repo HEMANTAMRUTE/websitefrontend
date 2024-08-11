@@ -39,6 +39,10 @@ const setFalseForStudent=()=>{
 const closeLogin=()=>{
     setDivVisible(false)
 }
+const navigateToPhone=()=>{
+  navigate('/phoneAuth');
+  
+}
   return (
     <div>
       <div className="form">
@@ -60,6 +64,14 @@ const closeLogin=()=>{
                    <h1 class="cursor-pointer px-4 py-3 w-5/6 text-center text-xl text-gray-600 font-bold">{t('Sign in with Google')}</h1>
       
                </a>
+               <p onClick={navigateToPhone} className='flex items-center h-9 justify-center mt-4 text-white bg-slate-100 rounded-lg hover:bg-gray-100 cursor-pointer'>
+                <div className="px-4 py-3">
+                    <svg className="h-6 w-6" viewBox="0 0 40 40">
+                        {/* SVG content or an icon of your choice */}
+                    </svg>
+                </div>
+                <h4 className='text-gray-500'>{t('Login With Phone')}</h4>
+            </p>
                <div className="mt-4 flex items-center justify-between">
 <span className='border-b w-1/5 lg:w1/4'></span>
 <a href="/" className='text-xs text-center text-gray-500 uppercase'>{t('or')}</a>
@@ -127,6 +139,16 @@ const closeLogin=()=>{
     <h1 className='text-gray-500'>{t('Login With Google')}
     </h1>
  </p>
+
+ 
+ <p onClick={navigateToPhone} className='flex items-center h-9 justify-center mt-4 text-white bg-slate-100 rounded-lg hover:bg-gray-100 cursor-pointer'>
+                <div className="px-4 py-3">
+                    <svg className="h-6 w-6" viewBox="0 0 40 40">
+                        {/* SVG content or an icon of your choice */}
+                    </svg>
+                </div>
+                <h4 className='text-gray-500'>{t('Login With Phone')}</h4>
+            </p>
  <div className="mt-4 flex items-center justify-between">
 <span className='border-b- w-1/5 lg:w-1/4'></span>
 <p className='text-gray-500 text sm font-bold mb-2'> {t('or')}</p>

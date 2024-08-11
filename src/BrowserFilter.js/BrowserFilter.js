@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Context } from '../Context/Context';
 import getUserInfo from '../getUserInfo';
 import axios from 'axios';
-import OTPVerification from '../Componets/OTPFormmod';
+//import OTPVerification from '../Componets/OTPFormmod';
 
 
 const BrowserFilter = () => {
@@ -52,12 +52,8 @@ const BrowserFilter = () => {
 
   return (
     <div>
-      {message && <p>{message}</p>}
-      {userInfo.browser !== 'Microsoft Edge' && userInfo.device !== 'mobile' && (
-        <OTPVerification
-          
-        />
-      )}
+     
+       
     </div>
   );
 };
