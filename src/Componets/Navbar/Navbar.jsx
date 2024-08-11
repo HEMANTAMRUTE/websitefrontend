@@ -7,10 +7,10 @@ import { signInWithPopup, signOut } from 'firebase/auth'
 import { auth, provider } from '../../firebase/firebase'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../../Feature/Userslice'
-import { useNavigate } from 'react-router-dom'
+
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
-
+import {  useLocation,useNavigate } from 'react-router-dom';
   const change=()=>{
    return{
     
@@ -18,6 +18,7 @@ import { useTranslation, initReactI18next } from "react-i18next";
   }
 
 function Navbar() {
+    
     const {t}=useTranslation();
     const navigate=useNavigate()
 const user=useSelector(selectUser)
@@ -56,6 +57,10 @@ const user=useSelector(selectUser)
     const hidetheProfile=()=>{
         document.getElementById("ico3").className="bi bi-caret-down-fill"
         setDivVisibleProfile(false)
+    }
+    const navigateToPhone=()=>{
+        navigate('/phoneAuth');
+        
     }
 
 
@@ -235,6 +240,20 @@ const user=useSelector(selectUser)
     <h4 className='text-gray-500'>{t('Login With Google')} 
     </h4>
  </p>
+
+
+ {/* New button for Phone Component */}
+ <p onClick={navigateToPhone} className='flex items-center h-9 justify-center mt-4 text-white bg-slate-100 rounded-lg hover:bg-gray-100'>
+                <div className="px-4 py-3">
+                    <svg className="h-6 w-6" viewBox="0 0 40 40">
+                        {/* SVG content or an icon of your choice */}
+                    </svg>
+                </div>
+                <h4 className='text-gray-500'>{t('Login With Phone')}</h4>
+            </p>
+
+
+
  <div className="mt-4 flex items-center justify-between">
 <span className='border-b- w-1/5 lg:w-1/4'></span>
 <p className='text-gray-500 text sm font-bold mb-2'> {t('or')}</p>

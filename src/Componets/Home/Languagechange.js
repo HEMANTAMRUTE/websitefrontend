@@ -21,6 +21,10 @@ function Languagechange() {
         
     navigate('/loginhistory');
 };
+const Phone = () => {
+        
+  navigate('/PhoneAuth');
+};
 
 
 
@@ -33,6 +37,7 @@ function Languagechange() {
         <button className='butt' onClick={() => changeLanguage('sp')}>Spanish</button>
         <button className='butt' onClick={() => changeLanguage('po')}>Portuguese</button>
         <button className='butt1' onClick={() => loginhistory()}>LoginHistory</button>
+        <button className='butt2' onClick={() => Phone()}>PhoneLogin</button>
         {/* Add more buttons for other languages */}
       </div>
     );

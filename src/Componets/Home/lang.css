@@ -11,11 +11,12 @@
     flex-wrap: wrap;
 }
 
-.butt, .butt1 {
+.butt, .butt1,.butt2 {
     height: 25px;
     width: 90px;
     border-radius: 5%;
     margin-top: 15px;
+    margin-bottom: 15px;
     background-color: rgb(77, 115, 241);
     color: white;
     border: none;
@@ -24,8 +25,11 @@
     line-height: 25px;
 }
 
-.butt1 {
+.butt2 {
     background-color: rgb(247, 116, 40);
+}
+.butt1 {
+    background-color: rgb(225, 18, 190);
 }
 
 @media (max-width: 768px) {
@@ -35,14 +39,14 @@
         justify-content: center;
     }
 
-    .butt, .butt1 {
+    .butt, .butt1,.butt2 {
         width: 45%;
         margin: 5px 2.5%;
     }
 }
 
 @media (max-width: 480px) {
-    .butt, .butt1 {
+    .butt, .butt1,.butt2 {
         width: 45%;
         height: 35px;
         font-size: 1rem;
