@@ -28,6 +28,7 @@ useEffect(()=>{
   setCompany(company)
   setCategory(category)
   setData(response.data)
+ 
    }
    fetchData()
 })
@@ -118,7 +119,8 @@ const text=document.getElementById("text")
           <p>{data.AdditionalInfo}</p>
 
           <p className='mt-3 text-xl font-bold text-start'> {t('Number of opening')}</p>
-          <p className='text-start'>{data.numberOfOpning}</p>
+          <p className='mt-3 text-xl font-bold text-start'>{data.numberOfOpening}</p>
+          
           <div className='flex justify-center mt-6 bg-blue-500 w-40 text-center text-white font-bold '>
           <button className='flex justify-center align-middle' onClick={show}>{t('Apply')}</button>
 
@@ -126,7 +128,7 @@ const text=document.getElementById("text")
      
           </div>
    
-
+          
       </div>
       {isDivVisible &&(
   <>

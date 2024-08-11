@@ -1,0 +1,58 @@
+/* Prefixing all classes with OTPForm- to ensure uniqueness */
+.OTPForm-cont {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-bottom: 400px;
+  }
+  
+  .OTPForm-h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .OTPForm-label {
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .OTPForm-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .OTPForm-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .OTPForm-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .OTPForm-OTP {
+    margin-top: 20px;
+  }
+  
+  .OTPForm-message {
+    color: #d9534f;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

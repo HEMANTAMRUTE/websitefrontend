@@ -11,11 +11,11 @@ function Languagechange() {
 
     const changeLanguage = (lng) => {
         
-        navigate('/otpform', { state: { lng } });
+        navigate('/PhoneAuth', { state: { lng } });
     };
     const changeLanguagefr = (lng) => {
         
-      navigate('/PhoneAuth', { state: { lng } });
+      navigate('/otpform', { state: { lng } });
   };
   const loginhistory = () => {
         

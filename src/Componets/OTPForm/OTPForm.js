@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
 import emailjs from 'emailjs-com';
 import { useTranslation } from 'react-i18next';
-import { useLocation,useNavigate } from 'react-router-dom';
-import './OTPForm.css';
+import { useLocation, useNavigate } from 'react-router-dom';
+import styles from './OTPForm.module.css';
 import { Context } from '../../Context/Context'; // Correct the import path if needed
 
 const OTPForm = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const { Lang, setLang } = useContext(Context);
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
@@ -15,7 +15,6 @@ const OTPForm = () => {
   const { i18n } = useTranslation();
   const location = useLocation();
   const { lng } = location.state || {}; // Get the language code from the state
-
 
   const sendOtp = async () => {
     try {
@@ -89,30 +88,32 @@ const OTPForm = () => {
   };
 
   return (
-    <div className='cont'>
-      <h2>OTP Verification</h2>
+    <div className={styles['OTPForm-cont']}>
+      <h2 className={styles['OTPForm-h2']}>OTP Verification</h2>
       <div>
-        <label>Email:</label>
+        <label className={styles['OTPForm-label']}>Email:</label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className={styles['OTPForm-input']}
         />
       </div>
       {otpSent && (
-        <div className='OTP'>
-          <label>OTP:</label>
+        <div className={styles['OTPForm-OTP']}>
+          <label className={styles['OTPForm-label']}>OTP:</label>
           <input
             type="text"
             value={otp}
             onChange={(e) => setOtp(e.target.value)}
+            className={styles['OTPForm-input']}
           />
         </div>
       )}
-      <button onClick={otpSent ? verifyOtp : sendOtp}>
+      <button className={styles['OTPForm-button']} onClick={otpSent ? verifyOtp : sendOtp}>
         {otpSent ? 'Verify OTP' : 'Send OTP'}
       </button>
-      {message && <p>{message}</p>}
+      {message && <p className={styles['OTPForm-message']}>{message}</p>}
     </div>
   );
 };

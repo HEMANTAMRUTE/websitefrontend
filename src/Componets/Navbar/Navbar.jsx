@@ -148,7 +148,57 @@ const user=useSelector(selectUser)
 </ul>
     </nav>
 
+    {
+        isDivVisibleForintern &&(
+            <div className="profile-dropdown-2">
+                <div className="left-section">
+             
+  <p>Top Locations</p>
+  <p>Profile</p>
+  <p>Top Category</p>
+  <p>Explore More Internships</p>
+</div>
+<div className="line flex bg-slate-400">
 
+</div>
+<div className="right-section">
+  <p>Intern at India</p>
+  <p>Intern at India</p>
+  <p>Intern at India</p>
+  <p>Intern at India</p>
+  <p>Intern at India</p>
+</div>
+      </div>
+             
+    
+        )
+    }
+
+
+{
+        isDivVisibleForJob &&(
+            <div className="profile-dropdown-1">
+                <div className="left-section">
+             
+  <p>Top Locations</p>
+  <p>Profile</p>
+  <p>Top Category</p>
+  <p>Explore More Internships</p>
+</div>
+<div className="line flex bg-slate-400">
+
+</div>
+<div className="right-section">
+  <p>Intern at India</p>
+  <p>Intern at India</p>
+  <p>Intern at India</p>
+  <p>Intern at India</p>
+  <p>Intern at India</p>
+</div>
+      </div>
+             
+    
+        )}
    
     
 <div className="login">

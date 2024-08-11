@@ -22,6 +22,8 @@ const PhoneAuth = ({ open, onClose, onVerify}) => {
   const [ShowOTP, setShowOTP] = useState(false);
   const [confirmationResult, setConfirmationResult] = useState(null);
   const [otp, setOtp] = useState("");
+  const location = useLocation();
+  const { lng } = location.state || {};
   useEffect(() => {
     if (ShowOTP) {
       setupRecaptcha();
@@ -79,8 +81,8 @@ const PhoneAuth = ({ open, onClose, onVerify}) => {
           alert("Login Success");
           setShowOTP(false);
           setPh('');
-          setLang('fr');
-          i18n.changeLanguage('fr');
+          i18n.changeLanguage(lng);
+          setLang(lng);
           navigate('/');
 
 
@@ -236,74 +238,82 @@ return (
 };
 
 const styles = {
-dialog: {
-  position: 'fixed',
- 
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
-  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  zIndex: 9999,  
-},
-container: {
-  backgroundColor: 'white',
-  padding: '20px',
-  borderRadius: '8px',
-  width: '300px',
-  textAlign: 'center',
-},
-label: {
-  fontWeight: 'bold',
-  fontSize: '1.2rem',
-  color: '#333',
-  marginBottom: '10px',
-},
-phoneInputContainer: {
-  width: '100%',
-  marginBottom: '15px',
-},
-phoneInput: {
-  width: '100%',
-  padding: '10px',
-  border: '2px solid gray',
-},
-otpContainer: {
-  marginTop: '20px',
-  display: 'flex',
-  justifyContent: 'center',
-},
-otpInput: {
-  width: '3rem',
-  height: '3rem',
-  margin: '0 0.5rem',
-  fontSize: '1.5rem',
-  borderRadius: '4px',
-  border: '2px solid black',
-  backgroundColor: 'lightgray',
-  color: 'black',
-  textAlign: 'center',
-},
-buttonContainer: {
-  marginTop: '20px',
-},
-button: {
-  backgroundColor: '#007BFF',
-  color: 'white',
-  padding: '10px 20px',
-  border: 'none',
-  borderRadius: '4px',
-  cursor: 'pointer',
-  fontWeight: 'bold',
-},
-buttonHover: {
-  backgroundColor: '#0056b3',
-},
-spinner: {
-  marginRight: '8px',
-},
+  dialog: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 9999,  
+  },
+  container: {
+    backgroundColor: 'white',
+    padding: '20px',
+    borderRadius: '8px',
+    width: '300px',
+    textAlign: 'center',
+    border: '2px solid black',
+    position: 'relative',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    marginTop: '300px',
+  },
+  label: {
+    fontWeight: 'bold',
+    fontSize: '1.2rem',
+    color: '#333',
+    marginBottom: '10px',
+  },
+  phoneInputContainer: {
+    width: '100%',
+    marginBottom: '15px',
+  },
+  phoneInput: {
+    width: '100%',
+    padding: '10px',
+    border: '2px solid gray',
+  },
+  otpContainer: {
+    marginTop: '20px',
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',  // Ensures wrapping of OTP inputs if necessary
+  },
+  otpInput: {
+    width: '2.5rem',    // Reduced width to fit within the container
+    height: '2.5rem',   // Adjusted height to match width
+    margin: '0 0.25rem', // Reduced margin to prevent overflow
+    fontSize: '1.5rem',
+    borderRadius: '4px',
+    border: '2px solid black',
+    backgroundColor: 'lightgray',
+    color: 'black',
+    textAlign: 'center',
+  },
+  buttonContainer: {
+    marginTop: '20px',
+  },
+  button: {
+    backgroundColor: '#007BFF',
+    color: 'white',
+    padding: '10px 20px',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    fontWeight: 'bold',
+  },
+  buttonHover: {
+    backgroundColor: '#0056b3',
+  },
+  spinner: {
+    marginRight: '8px',
+  },
 };
+
+
 export default PhoneAuth;

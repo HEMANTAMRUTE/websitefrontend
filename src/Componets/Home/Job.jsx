@@ -37,6 +37,7 @@ function Job() {
     const filterInternShips=JobData.filter((item)=>
     !selectedCategory ||item.category === selectedCategory
 )
+   console.log(JobData);
   return (
     <div>
  
@@ -82,9 +83,7 @@ filterInternShips.map(( data,index)=>(
 {t('View details')} <i class="bi bi-chevron-right"></i>
    </span></Link>
         </div>
-        </div>
-        
-        
+        </div>    
     ))
 }
 

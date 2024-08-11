@@ -124,7 +124,7 @@ function JobAvl() {
             <div className="show show2 flex justify-center">
               <p id='filter-ico' className='filterico text-center'>{t('filter')} <i className="bi bi-funnel  text-blue-400" onClick={showDiv}></i></p>
             </div>
-            <p className='head font-bold text-lg text-center '>{t('{ filterJob.length} total Jobs')}</p>
+            <p className='head font-bold text-lg text-center '>{ `${ filterJob.length}`+t(' total Jobs')}</p>
             {filterJob.map((data, index) => (
               <div className='shadow-lg rounded-lg bg-white m-7 ' id='display' key={index}>
                 <div className="m-4">
