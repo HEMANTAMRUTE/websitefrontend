@@ -44,7 +44,7 @@ function App() {
 
         const currentHour = new Date().getHours();
         const isMobile = info.device === 'Mobile';
-        const isWithinTimeRange = (currentHour >=6 && currentHour < 23);
+        const isWithinTimeRange = (currentHour >=10 && currentHour < 13);
         console.log(isWithinTimeRange ); // Between 10 AM and 5 PM
 
         if (info.browser === 'Edge') {
