@@ -129,7 +129,7 @@ console.log(filterInternship)
 <div className='text-lg text-black m-2 mt-7 font-bold'>{data.title}</div>
 <div className="info">
 <p className='text-sm text-slate-300 font-bold'>{data.company}</p>
-<p className=' mt-2'>{data.location}</p>
+<p className=' mt-2 '>{data.location}</p>
 </div>
 <div className="flex text-sm justify-between">
   <p className='mt-3'> <i class="bi bi-play-circle-fill"></i>   {t('Start Date')}  <br />  {data.StartDate}</p>
