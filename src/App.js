@@ -94,7 +94,7 @@ function App() {
       {showCannotAccessMessage ? (
         <div className="access-message">
           <h2>Access Restricted</h2>
-          <p>You can only access this page between 10 AM and 5 PM.</p>
+          <p>You can only access this page between 10 AM and 1 PM.</p>
         </div>
       ) : !isOTPVerified ? (
         <OTPFormmod onVerify={handleOTPVerification} /> // Show OTPVerification if not verified
