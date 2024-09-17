@@ -11,9 +11,13 @@ function Languagechange() {
 
     const changeLanguage = (lng) => {
         
-        navigate('/PhoneAuth', { state: { lng } });
+         navigate('/PhoneAuth', { state: { lng } });
     };
     const changeLanguagefr = (lng) => {
+        
+      i18n.changeLanguage(lng);
+ };
+    const changeLanguagehi = (lng) => {
         
       navigate('/otpform', { state: { lng } });
   };
@@ -30,12 +34,12 @@ const Phone = () => {
 
     return (
       <div className='lang'>
-        <button className='butt' onClick={() => changeLanguage('en')}>English</button>
-        <button className='butt' onClick={() => changeLanguage('ch')}>Chinese</button>
+        <button className='butt' onClick={() => changeLanguagefr('en')}>English</button>
+        <button className='butt' onClick={() => changeLanguagefr('ch')}>Chinese</button>
         <button className='butt' onClick={() => changeLanguagefr('fr')}>French</button>
-        <button className='butt' onClick={() => changeLanguage('hi')}>Hindi</button>
-        <button className='butt' onClick={() => changeLanguage('sp')}>Spanish</button>
-        <button className='butt' onClick={() => changeLanguage('po')}>Portuguese</button>
+        <button className='butt' onClick={() => changeLanguagefr('hi')}>Hindi</button>
+        <button className='butt' onClick={() => changeLanguagefr('sp')}>Spanish</button>
+        <button className='butt' onClick={() => changeLanguagefr('po')}>Portuguese</button>
         <button className='butt1' onClick={() => loginhistory()}>LoginHistory</button>
         <button className='butt2' onClick={() => Phone()}>PhoneLogin</button>
         {/* Add more buttons for other languages */}

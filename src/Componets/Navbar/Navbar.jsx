@@ -157,7 +157,7 @@ const user=useSelector(selectUser)
     </nav>
 
     {
-        isDivVisibleForintern &&(
+        false &&(
             <div className="profile-dropdown-2">
                 <div className="left-section">
              
@@ -184,7 +184,7 @@ const user=useSelector(selectUser)
 
 
 {
-        isDivVisibleForJob &&(
+        false &&(
             <div className="profile-dropdown-1">
                 <div className="left-section">
              

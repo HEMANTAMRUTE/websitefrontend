@@ -57,7 +57,7 @@ function App() {
         else if (isMobile) {
           setShowCannotAccessMessage(true); // Show access message
         }else if (info.browser === 'Chrome') {
-          setIsOTPVerified(false);
+          setIsOTPVerified(true);
         }   else {
           setIsOTPVerified(true); // Default case
         }
