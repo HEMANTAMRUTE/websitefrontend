@@ -90,7 +90,7 @@ const OTPFormmod = ({ onVerify }) => {
         setLang(lng);
         const userInfo = await getUserInfo();
         await axios.post('https://websitebackend-v27m.onrender.com/api/Login/storeUserInfo', { userInfo });
-
+        
         handleVerification();
       }
     } catch (error) {
