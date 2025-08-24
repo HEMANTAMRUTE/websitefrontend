@@ -13,7 +13,7 @@ function DeatilApplication() {
 
   useEffect(() => {
     const fetchData = async () => {
-     const response=await axios.get(`https://websitebackend-v27m.onrender.com/api/application/${id}`)
+     const response=await axios.get(`https://websitebackend-v27m.onrender.com/api/application/${id}`,payload)
       setData([response.data]);
     };
     fetchData();
