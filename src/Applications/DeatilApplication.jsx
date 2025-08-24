@@ -29,7 +29,7 @@ function DeatilApplication() {
         payload.link = formData.link;
       }
 
-       const response=await axios.get(`https://websitebackend-v27m.onrender.com/api/application/${id}`)
+       const response=await axios.get(`https://websitebackend-v27m.onrender.com/api/application/${id}`,payload)
       const updatedApplications = data.map(app =>
         app._id === id ? response.data.data : app
       );
