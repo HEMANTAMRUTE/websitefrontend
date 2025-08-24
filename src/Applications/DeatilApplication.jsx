@@ -21,7 +21,7 @@ function DetailApplication() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          https://https://websitebackend-v27m.onrender.com/api/application/${id}
+          `https://websitebackend-v27m.onrender.com/api/application/${id}`
         );
         setData(response.data); // store as object
       } catch (error) {
@@ -50,7 +50,7 @@ function DetailApplication() {
       }
 
       const response = await axios.put(
-        https://https://websitebackend-v27m.onrender.com/api/application/${id},
+        `https://websitebackend-v27m.onrender.com/api/application/${id}`,
         payload
       );
 
