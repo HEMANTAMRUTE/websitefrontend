@@ -12,7 +12,7 @@ function InternDeatil() {
   const {t}=useTranslation();
   const user=useSelector(selectUser)
   const [isDivVisible,setDivVisible]=useState(false)
-  const [textare, setTextare]=useState("")
+  const [textare, setTextare]=useState("") 
   const [company,setCompany]=useState("")
   const [category,setCategory]=useState("")
   const navigate=useNavigate();

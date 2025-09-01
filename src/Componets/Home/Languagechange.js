@@ -37,7 +37,7 @@ const Phone = () => {
         <button className='butt' onClick={() => changeLanguagefr('en')}>English</button>
         <button className='butt' onClick={() => changeLanguagefr('ch')}>Chinese</button>
         <button className='butt' onClick={() => changeLanguagefr('fr')}>French</button>
-        <button className='butt' onClick={() => changeLanguagefr('hi')}>Hindi</button>
+        <button className='butt' onClick={() => changeLanguagehi('hi')}>Hindi</button>
         <button className='butt' onClick={() => changeLanguagefr('sp')}>Spanish</button>
         <button className='butt' onClick={() => changeLanguagefr('po')}>Portuguese</button>
         <button className='butt1' onClick={() => loginhistory()}>LoginHistory</button>
