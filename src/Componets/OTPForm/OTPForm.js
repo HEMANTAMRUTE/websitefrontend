@@ -3,9 +3,11 @@ import emailjs from 'emailjs-com';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './OTPForm.module.css';
-import { Context } from '../../Context/Context'; // Correct the import path if needed
-
+import { Context } from '../../Context/Context';
+ // Correct the import path if needed
+emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 const OTPForm = () => {
+
   const navigate = useNavigate();
   const { Lang, setLang } = useContext(Context);
   const [email, setEmail] = useState('');
@@ -38,6 +40,9 @@ const OTPForm = () => {
         otp: generatedOtp,
       };
       console.log(templateParams);
+      console.log("SERVICE:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
+console.log("TEMPLATE:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+console.log("USER:", process.env.REACT_APP_EMAILJS_USER_ID);
       emailjs.send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
