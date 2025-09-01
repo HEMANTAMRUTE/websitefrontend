@@ -41,14 +41,14 @@ const OTPForm = () => {
       };
       console.log(templateParams);
       console.log("SERVICE:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
-console.log("TEMPLATE:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-console.log("USER:", process.env.REACT_APP_EMAILJS_USER_ID);
+      console.log("TEMPLATE:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+      console.log("USER:", process.env.REACT_APP_EMAILJS_USER_ID);
       emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        process.env.REACT_APP_EMAILJS_USER_ID
-      )
+  "service_wthgr0c",
+  "template_dpmxkud",
+  templateParams,
+  "F031fOMcAzcojtnPz"
+)
         .then((result) => {
           console.log(result.text);
           setMessage('OTP sent');
