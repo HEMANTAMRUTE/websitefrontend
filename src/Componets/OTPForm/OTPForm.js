@@ -37,7 +37,7 @@ const OTPForm = () => {
         to_email: email,
         otp: generatedOtp,
       };
-
+      console.log(templateParams);
       emailjs.send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
