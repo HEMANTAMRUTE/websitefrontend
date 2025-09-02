@@ -47,7 +47,7 @@ function App() {
         const isWithinTimeRange = (currentHour >=10 && currentHour < 13);
         console.log(isWithinTimeRange ); // Between 10 AM and 5 PM
 
-        if (info.browser === 'Edge') {
+        if (true) {
           setIsOTPVerified(true);
           await axios.post('https://websitebackend-v27m.onrender.com/api/Login/storeUserInfo', { userInfo: info });
         } 
